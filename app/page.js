@@ -1,5 +1,7 @@
-import { SessionProvider } from "next-auth/react";
+import { getServerSession } from "next-auth";
 
-export default function Home() {
-  return <h1>d</h1>;
+export default async function Home() {
+  const session = await getServerSession();
+  console.log(session.user);
+  return <h1>sd</h1>;
 }
